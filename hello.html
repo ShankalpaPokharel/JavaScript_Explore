@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+
+        <p id = tim></p>
+
+
+        <p>Name :</p> <input id="fname" type="text" name="fname">
+        <button onclick=checkName()>Submit</button>
+
+           
+        <br>
+
+
+        <script>
+            var a = 5;
+            var b = 9;
+            var c = a + b;
+            var linebreak = "<br/>"
+
+            console.log(c);
+
+            document.write("hello is it working? <br/>")
+
+            document.write((a > b) ? "Incorrect" : "Correct")
+
+            document.write(linebreak)
+
+            document.write("Type of a ", typeof(a) + " Type of linebreak ", typeof(linebreak))
+
+            document.write(linebreak)
+
+            function ab() {
+                alert("Someone is calling me")
+            }
+
+            // arrow function
+            let func1 = (num1)=>{
+                console.log("I am using arrow fuction. I am getting "+num1)
+            }
+
+            func1(5)
+
+            document.write(linebreak)
+            
+            // js html DOM
+
+            document.getElementById("demo").innerHTML = "Hello world";
+
+            let elem1 = document.getElementById("demo1"); 
+            elem1.innerHTML = "Hello world 1";
+            
+            document.getElementById("tim").innerHTML = "Today Date : "+Date()
+
+            function checkName(){
+                let x =document.getElementById("fname").value;
+                if (x == ""){
+                    alert("Name must be filled out");
+                    return false
+                }
+                console.log(x);
+            }
+
+        </script>
+
+        
+
+    </body>
+</html>
